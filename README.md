@@ -2,7 +2,7 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="/docs/images/logo-dark.png">
-  <img alt="Text changing depending on mode. Light: 'So light!' Dark: 'So dark!'" src="/docs/images/logo-light.png">
+  <img alt="Text changing depending on mode. Light: 'So light!' Dark: 'So dark!'" src="/docs/images/logo-light.png" style="max-width: 280px; height: auto;">
 </picture>
 
 ---
