@@ -277,7 +277,7 @@ const { toMin, mediaType, filename, parent } = stringFormatter()
 const { configID } = storeToRefs(useConfig())
 
 useHead({
-    title: `${t('button.media')} | ffplayout`,
+    title: `${t('button.media')} | HubCloud`,
 })
 
 watch([width], () => {

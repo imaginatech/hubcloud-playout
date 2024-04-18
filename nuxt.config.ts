@@ -20,7 +20,7 @@ export default defineNuxtConfig({
 
     app: {
         head: {
-            title: 'ffplayout',
+            title: 'HubCloud',
             meta: [
                 {
                     charset: 'utf-8',
@@ -32,14 +32,14 @@ export default defineNuxtConfig({
                 {
                     hid: 'description',
                     name: 'description',
-                    content: 'Frontend for ffplayout, the 24/7 Rust and playlist based streaming solution.',
+                    content: 'Frontend for HubCloud playout, the 24/7 Rust and playlist based streaming solution.',
                 },
             ],
             link: [
                 {
                     rel: 'icon',
-                    type: 'image/x-icon',
-                    href: '/favicon.ico',
+                    type: 'image/png',
+                    href: '/favicon.png',
                 },
             ],
         },

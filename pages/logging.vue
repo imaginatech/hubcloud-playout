@@ -30,7 +30,7 @@ const colorMode = useColorMode()
 const { locale, t } = useI18n()
 
 useHead({
-    title: `${t('button.logging')} | ffplayout`,
+    title: `${t('button.logging')} | HubCloud`,
 })
 
 const { configID } = storeToRefs(useConfig())

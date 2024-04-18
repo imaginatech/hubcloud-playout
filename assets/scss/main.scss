@@ -15,6 +15,40 @@ main > div {
     font-style: normal;
 }
 
+.dark .img-light, 
+.light .img-dark {
+    display: none;
+}
+.login .img-dark,
+.login .img-light {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 300px;
+}
+.login form {
+    background: #2c2c2c;
+    padding: 35px;
+    width: 350px;
+    border-radius: 10px;
+
+    .btn {
+        width: 100%;
+        margin-top: 18px;
+        border: 2px solid;
+        background: #ff560b;
+        color: #ffffff;
+        text-transform: uppercase;
+    }
+
+    .alert {
+        color: #ffffff;
+        margin-top: 18px;
+    }
+}
+.navbar-brand img {
+    width: 250px;
+}
+
 .splitpanes--horizontal > .splitpanes__splitter {
     position: relative;
     border-top: 1px solid var(--my-gray);

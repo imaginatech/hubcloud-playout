@@ -7,4 +7,9 @@ export default defineNuxtRouteMiddleware((to) => {
     if (!auth.isLogin && !String(to.name).includes('index_')) {
         return navigateTo(localePath({ name: 'index' }))
     }
+
+    if(auth.isLogin && String(to.name).includes('index_')) {
+        return navigateTo(localePath({ name: 'player' }))
+    }
+
 })

@@ -229,7 +229,7 @@ const indexStore = useIndex()
 const { numberToHex, hexToNumber } = stringFormatter()
 
 useHead({
-    title: 'Messages | ffplayout',
+    title: 'Messages | HubCloud',
 })
 
 interface PresetName {

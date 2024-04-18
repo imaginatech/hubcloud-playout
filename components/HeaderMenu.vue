@@ -1,7 +1,8 @@
 <template>
     <div class="navbar bg-base-100 min-h-[52px] p-0 shadow">
         <NuxtLink class="navbar-brand min-w-[46px] p-2" href="/">
-            <img src="~/assets/images/ffplayout-small.png" class="img-fluid" alt="Logo" width="30" height="30" />
+            <img src="~/assets/images/logo-dark.png" class="img-fluid img-dark" alt="Logo" />
+            <img src="~/assets/images/logo-light.png" class="img-fluid img-light" alt="Logo" />
         </NuxtLink>
         <div class="navbar-end w-1/5 grow">
             <label class="swap swap-rotate me-2 md:hidden">
@@ -102,12 +103,12 @@ const configStore = useConfig()
 const indexStore = useIndex()
 
 const menuItems = ref([
-    { name: t('button.home'), link: localePath({ name: 'index' }) },
+    //{ name: t('button.home'), link: localePath({ name: 'index' }) },
     { name: t('button.player'), link: localePath({ name: 'player' }) },
     { name: t('button.media'), link: localePath({ name: 'media' }) },
     { name: t('button.message'), link: localePath({ name: 'message' }) },
-    { name: t('button.logging'), link: localePath({ name: 'logging' }) },
-    { name: t('button.configure'), link: localePath({ name: 'configure' }) },
+    //{ name: t('button.logging'), link: localePath({ name: 'logging' }) },
+    //{ name: t('button.configure'), link: localePath({ name: 'configure' }) },
 ])
 
 if (colorMode.value === 'dark') {

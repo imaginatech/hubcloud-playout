@@ -1,51 +1,15 @@
 <template>
-    <div class="w-full min-h-screen xs:h-full flex justify-center items-center">
+    <div class="w-full min-h-screen xs:h-full flex justify-center items-center login">
         <div v-if="authStore.isLogin" class="flex flex-wrap justify-center text-center w-full max-w-[1024px] p-5">
-            <SystemStats v-if="configStore.configGui.length > 0" />
-            <div class="flex flex-wrap justify-center gap-1 md:gap-0 md:join mt-5">
-                <NuxtLink :to="localePath({ name: 'player' })" class="btn join-item btn-primary px-2">
-                    {{ $t('button.player') }}
-                </NuxtLink>
-                <NuxtLink :to="localePath({ name: 'media' })" class="btn join-item btn-primary px-2">
-                    {{ $t('button.media') }}
-                </NuxtLink>
-                <NuxtLink :to="localePath({ name: 'message' })" class="btn join-item btn-primary px-2">
-                    {{ $t('button.message') }}
-                </NuxtLink>
-                <NuxtLink :to="localePath({ name: 'logging' })" class="btn join-item btn-primary px-2">
-                    {{ $t('button.logging') }}
-                </NuxtLink>
-                <NuxtLink
-                    v-if="authStore.role.toLowerCase() == 'admin'"
-                    :to="localePath({ name: 'configure' })"
-                    class="btn join-item btn-primary px-2"
-                >
-                    {{ $t('button.configure') }}
-                </NuxtLink>
-                <button class="btn join-item btn-primary px-2" @click="logout()">
-                    {{ $t('button.logout') }}
-                </button>
-                <select
-                    v-model="selectedLang"
-                    class="select select-primary select-bordered join-item max-w-xs ps-2"
-                    @change="changeLang(selectedLang)"
-                >
-                    <option v-for="(loc, index) in locales" :key="index" :value="/* @ts-ignore */ loc.code">
-                        {{
-                            /* @ts-ignore */
-                            loc.name
-                        }}
-                    </option>
-                </select>
-                <label class="join-item btn btn-primary swap swap-rotate me-2">
-                    <input type="checkbox" :checked="indexStore.darkMode" @change="toggleDarkTheme" />
-                    <SvgIcon name="swap-on" classes="w-5 h-5" />
-                    <SvgIcon name="swap-off" classes="w-5 h-5" />
-                </label>
-            </div>
+            <img src="~/assets/images/logo-dark.png" class="img-fluid img-dark" alt="Logo" />
+            <img src="~/assets/images/logo-light.png" class="img-fluid img-light" alt="Logo" />
+            <h1>Aguarde...</h1>
         </div>
         <div v-else class="w-96 min-w-full flex flex-col justify-center items-center px-4">
-            <h1 class="text-6xl xs:text-8xl">ffplayout</h1>
+            <h1 class="text-6xl xs:text-8xl">
+                <img src="~/assets/images/logo-dark.png" class="img-fluid img-dark" alt="Logo" />
+                <img src="~/assets/images/logo-light.png" class="img-fluid img-light" alt="Logo" />
+            </h1>
 
             <form class="mt-10" @submit.prevent="login">
                 <input
@@ -64,22 +28,17 @@
                     required
                 />
 
-                <div class="w-full mt-4 grid grid-flow-row-dense grid-cols-12 grid-rows-1 gap-2">
-                    <div class="col-span-3">
-                        <button type="submit" class="btn btn-primary">
-                            {{ $t('button.login') }}
-                        </button>
-                    </div>
-                    <div class="col-span-12 sm:col-span-9">
-                        <div
-                            v-if="showLoginError"
-                            role="alert"
-                            class="alert alert-error w-auto rounded z-2 h-12 p-[0.7rem]"
-                        >
-                            <SvgIcon name="error" />
-                            <span>{{ formError }}</span>
-                        </div>
-                    </div>
+                <button type="submit" class="btn btn-primary w-100">
+                    {{ $t('button.login') }}
+                </button>
+
+                <div
+                    v-if="showLoginError"
+                    role="alert"
+                    class="alert alert-error w-auto rounded z-2 h-12 p-[0.7rem]"
+                >
+                    <SvgIcon name="error" />
+                    <span>{{ formError }}</span>
                 </div>
             </form>
         </div>
@@ -123,6 +82,7 @@ async function login() {
         }
 
         await configStore.nuxtClientInit()
+        return navigateTo(localePath({ name: 'player' }))
     } catch (e) {
         formError.value = e as string
     }

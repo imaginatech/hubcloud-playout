@@ -43,7 +43,7 @@
 const { t } = useI18n()
 
 useHead({
-    title: `${t('button.configure')} | ffplayout`,
+    title: `${t('button.configure')} | HubCloud`,
 })
 
 const activeConf = ref(1)

@@ -204,7 +204,7 @@ const mediaStore = useMedia()
 const playlistStore = usePlaylist()
 
 useHead({
-    title: `${t('button.player')} | ffplayout`,
+    title: `${t('button.player')} | HubCloud`,
 })
 
 const { listDate } = storeToRefs(usePlaylist())
