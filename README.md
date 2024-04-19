@@ -16,9 +16,10 @@
 
 ## Instalação:
 
-1. Certifiquese de estar logado em sua conta do github com acesso a esse repositório na conexão shell que estiver utilizando
-
-2. Baixe o instalador:
+1. Gere um token de acesso temporário nas configurações de sua conta:
+   [Clique aqui para gerar seu token de acesso](https://github.com/settings/tokens)
+   
+3. Baixe o instalador:
 ```bash
     curl -o- https://github.com/imaginatech/hubcloud-playout/releases/download/1.0/install.sh | bash
 ```
