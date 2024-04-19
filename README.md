@@ -17,7 +17,7 @@
 ## Instalação:
 
 1. Gere um token de acesso temporário nas configurações de sua conta:
-   [Clique aqui para gerar seu token de acesso](https://github.com/settings/tokens){:target="_blank"}
+   [Clique aqui para gerar seu token de acesso](https://github.com/settings/tokens)
    
 3. Baixe o instalador:
 ```bash
