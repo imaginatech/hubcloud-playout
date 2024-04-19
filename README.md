@@ -21,7 +21,7 @@
    
 3. Baixe o instalador:
 ```bash
-    curl -o- https://github.com/imaginatech/hubcloud-playout/releases/download/1.0/install.sh | bash
+    curl -o- https://github.com/imaginatech/hubcloud-playout/releases/download/1.0/install.sh
 ```
 3. Torne o arquivo em executável:
 ```bash
@@ -31,4 +31,7 @@
 ```bash
     ./install.sh
 ```
-
+5. Cadastre o usuário administrador:
+```bash
+    ffpapi -a
+```
