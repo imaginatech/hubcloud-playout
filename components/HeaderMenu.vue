@@ -108,7 +108,7 @@ const menuItems = ref([
     { name: t('button.media'), link: localePath({ name: 'media' }) },
     { name: t('button.message'), link: localePath({ name: 'message' }) },
     //{ name: t('button.logging'), link: localePath({ name: 'logging' }) },
-    //{ name: t('button.configure'), link: localePath({ name: 'configure' }) },
+    { name: t('button.configure'), link: localePath({ name: 'configure' }) },
 ])
 
 if (colorMode.value === 'dark') {
