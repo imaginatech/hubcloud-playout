@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+    telemetry: false,
     devServer: {
         port: 3000, // default: 3000
         host: '127.0.0.1', // default: localhost
@@ -16,7 +17,7 @@ export default defineNuxtConfig({
 
     ignore: ['**/public/tv-media**', '**/public/Videos**', '**/public/live**', '**/public/home**'],
     ssr: false,
-    // debug: true,
+    debug: false,
 
     app: {
         head: {
@@ -117,7 +118,7 @@ export default defineNuxtConfig({
             useCookie: true,
             alwaysRedirect: true,
         },
-        // debug: true,
+  
         langDir: 'lang',
         defaultLocale: 'en',
 
@@ -135,6 +136,4 @@ export default defineNuxtConfig({
     experimental: {
         payloadExtraction: false,
     },
-    
-    telemetry: false
 })
