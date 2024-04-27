@@ -51,10 +51,10 @@ sudo systemctl daemon-reload
 sudo systemctl enable hubcloud
 
 # Baixar o arquivo ffplayout deb e armazená-lo no diretório /tmp
-wget -P /tmp https://github.com/ffplayout/ffplayout/releases/download/v0.21.1/ffplayout_0.21.1-1_amd64.deb
+wget -P /tmp https://github.com/ffplayout/ffplayout/releases/download/v0.21.4/ffplayout_0.21.4-1_amd64.deb
 
 # Instalar o ffplayout usando o dpkg
-sudo apt install /tmp/ffplayout_0.21.1-1_amd64.deb
+sudo apt install /tmp/ffplayout_0.21.4-1_amd64.deb
 
 # Instalar o ffmpeg
 sudo apt install -y ffmpeg
