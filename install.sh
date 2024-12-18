@@ -51,10 +51,10 @@ sudo systemctl daemon-reload
 sudo systemctl enable hubcloud
 
 # Baixar o arquivo ffplayout deb e armazená-lo no diretório /tmp
-wget -P /tmp https://github.com/ffplayout/ffplayout/releases/download/v0.21.4/ffplayout_0.21.4-1_amd64.deb
+wget -P /tmp https://github.com/ffplayout/ffplayout/releases/download/v0.24.4/ffplayout_v0.24.4-1_amd64.deb
 
 # Instalar o ffplayout usando o dpkg
-sudo apt install /tmp/ffplayout_0.21.4-1_amd64.deb
+sudo apt install /tmp/ffplayout_v0.24.4-1_amd64.deb
 
 # Instalar o ffmpeg
 sudo apt install -y ffmpeg
@@ -82,7 +82,7 @@ sudo mkdir -p /var/www/playout
 # Adicionar configuração do diretório no Nginx
 sudo sh -c 'echo "server {
     listen 80;
-    server_name playout.esflix.com.br;
+    server_name hubtv.hubwatch.online;
 
     location / {
         proxy_pass http://localhost:3000;
