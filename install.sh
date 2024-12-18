@@ -1,18 +1,3 @@
-# Verificar se está logado no GitHub
-if git config --get remote.origin.url >/dev/null 2>&1; then
-    echo "✅ Você está logado no GitHub."
-else
-    echo "❌ Você não está logado no GitHub."
-fi
-
-# Verificar se tem autorização para clonar o repositório
-if git ls-remote --exit-code https://github.com/imaginatech/hubcloud-playout.git >/dev/null 2>&1; then
-    echo "✅ Você tem autorização para clonar o repositório."
-else
-    echo "❌ Você não tem autorização para clonar o repositório."
-    exit 1
-fi
-
 # Clonar o repositório hubcloud-playout na branch master para /var/www/playout
 sudo git clone -b master https://github.com/imaginatech/hubcloud-playout.git /var/www/playout
 
